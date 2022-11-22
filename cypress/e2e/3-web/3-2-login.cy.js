@@ -21,7 +21,7 @@ describe('Funcionalidade login', () => {
         })
     });
 
-    it.only('Devo fazer o login com sucesso, usando importacao', () => {
+    it('Devo fazer o login com sucesso, usando importacao', () => {
         cy.login(usuarios[1].usuario, usuarios[1].senha)
         cy.get('[data-test="dashboard-welcome"]').should('contain', 'Bem-vindo')
     });

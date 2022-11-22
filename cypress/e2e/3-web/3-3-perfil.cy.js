@@ -34,7 +34,7 @@ describe('Funcionalidade: Cadastrar perfil', () => {
         cy.get('[data-test="dashboard-editProfile"]').should('exist').and('be.visible')
     });
 
-    it.only('Deve criar o perfil com sucesso, usando command', () => {
+    it('Deve criar o perfil com sucesso, usando command', () => {
         cy.criarPerfil(perfil.empresa, perfil.site, perfil.localizacao, perfil.skill, perfil.github, perfil.bioagrafia)
         cy.get('[data-test="dashboard-editProfile"]').should('exist').and('be.visible')
     });
